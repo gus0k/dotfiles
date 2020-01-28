@@ -30,5 +30,6 @@ function linkDotfile {
 }
 
 linkDotfile .vimrc
-linkDotfile .bash_profile
-linkDotfile .bash_aliases
+linkDotfile .aliases
+linkDotfile .bashrc
+linkDotfile .env
