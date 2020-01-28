@@ -30,6 +30,6 @@ function linkDotfile {
 }
 
 linkDotfile .vimrc
-linkDotfile .aliases
-linkDotfile .bashrc
 linkDotfile .env
+linkDotfile .aliases
+linkDotfile .zshrc
