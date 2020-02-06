@@ -2,3 +2,5 @@ alias l="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
 alias grj='git remind status -a; cd $(git remind status -n | fzf)'
+
+alias todo="vim ~/notes/todo.txt"
