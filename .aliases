@@ -4,3 +4,5 @@ alias ...="cd ../.."
 alias grj='git remind status -a; cd $(git remind status -n | fzf)'
 
 alias task="vim ~/Dropbox/tasks/index.md"
+
+alias gp=gitpush
