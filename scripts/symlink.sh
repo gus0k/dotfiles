@@ -29,7 +29,7 @@ function linkDotfile {
   ln -s ${dotfilesDir}/${1} ${dest}
 }
 
-linkDotfile .vimrc
+linkDotfile .profile
 linkDotfile .env
 linkDotfile .aliases
 linkDotfile .zshrc

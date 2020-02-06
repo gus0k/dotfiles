@@ -78,3 +78,6 @@ plugins=(git)
 # # Example aliases
 # # alias zshconfig="mate ~/.zshrc"
 # # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+#
+eval `keychain --eval --agents ssh id_rsa`
