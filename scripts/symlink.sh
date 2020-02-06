@@ -34,3 +34,4 @@ linkDotfile .env
 linkDotfile .aliases
 linkDotfile .zshrc
 linkDotfile .fun
+linkDotfile .gitconfig
