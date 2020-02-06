@@ -1,5 +1,5 @@
 [remind]
-	paths=/home/guso/github/*,/home/guso/.vim,/home/guso/notes
+	paths=$HOME/github/*,$HOME/.vim,$HOME/notes
 [user]
 	email = gusok@protonmail.com
 	name = gus0k
