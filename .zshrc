@@ -8,6 +8,10 @@ if [ -f ~/.env ]; then
 	source ~/.env
 fi
 
+if [ -f ~/.fun ]; then
+	source ~/.fun
+fi
+
 # # Set name of the theme to load --- if set to "random", it will
 # # load a random theme each time oh-my-zsh is loaded, in which case,
 # # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -51,7 +55,7 @@ ZSH_THEME="robbyrussell"
 # # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 #
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 #
 # # User configuration
 #
@@ -80,4 +84,3 @@ plugins=(git)
 # # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 #
-eval `keychain --eval --agents ssh id_rsa`

@@ -33,3 +33,4 @@ linkDotfile .profile
 linkDotfile .env
 linkDotfile .aliases
 linkDotfile .zshrc
+linkDotfile .fun
