@@ -1,7 +1,7 @@
 alias l="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
-alias grj='git remind status -a; cd $(git remind status -n | fzf)'
+alias grem='git remind status -a; cd $(git remind status -n | fzf)'
 
 alias task="vim ~/Dropbox/tasks/index.md"
 
