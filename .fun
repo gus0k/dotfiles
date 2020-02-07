@@ -30,3 +30,25 @@ else
 fi
 
 }
+
+gitstatus () {
+
+while read in;
+do
+	git -C "$in" status | (
+	    unset dirty deleted untracked newfile ahead renamed
+	    while read line ; do
+		case "$line" in
+		  *modified:*)                      dirty='!' ; ;;
+		  *deleted:*)                       deleted='x' ; ;;
+		  *'Untracked files:')              untracked='?' ; ;;
+		  *'new file:'*)                    newfile='+' ; ;;
+		  *'Your branch is ahead of '*)     ahead='*' ; ;;
+		  *renamed:*)                       renamed='>' ; ;;
+		esac
+	    done
+	    bits="$dirty$deleted$untracked$newfile$ahead$renamed"
+	    [ -n "$bits" ] && echo "$in: $bits" || echo "$in: "
+	);
+done < $GITPROJECTS
+}

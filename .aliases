@@ -1,8 +1,8 @@
 alias l="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
-alias grem="git remind status -a; cd $(git remind status -n | fzf)"
 
 alias task="cd ~/Dropbox/tasks/; vim index.md"
 
 alias lg="git add .; git commit -a -m '...'; git push;";
+alias gits="gitstatus"
