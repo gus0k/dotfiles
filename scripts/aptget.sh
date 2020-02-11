@@ -5,8 +5,28 @@ sudo apt-get install -y \
 	keychain \
 	zsh \
 	ack-grep \
-        vim-gnome \
-       
+        vim-gtk \
+        wget \
+	apt-transport-https \
+	ca-certificates \
+	gnupg2 \
+	software-properties-common
+
+# Docker key        
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+
+## Add repo (amd64)
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/debian \
+   $(lsb_release -cs) \
+   stable"
+
+sudo apt-get update
+sudo apt -y install docker-ce docker-ce-cli containerd.io
+
+sudo usermod -aG docker $USER
+newgrp docker
+
 
 
 # Install oh-my-zsh
@@ -19,9 +39,10 @@ fi
 # Install fzf
 if [ ! -d "$HOME/.fzf" ]; then
    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-   zsh "$HOME/.fzf/install"
+   sh "$HOME/.fzf/install"
 else
     echo "fzf already exists"
 fi
+
 
 
