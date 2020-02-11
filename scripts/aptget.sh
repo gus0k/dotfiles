@@ -10,7 +10,9 @@ sudo apt-get install -y \
 	apt-transport-https \
 	ca-certificates \
 	gnupg2 \
-	software-properties-common
+	software-properties-common \
+	zathura \ 
+	xdotool
 
 # Docker key        
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
