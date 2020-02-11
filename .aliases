@@ -6,3 +6,6 @@ alias task="cd ~/Dropbox/tasks/; vim index.md"
 
 alias lg="git add .; git commit -a -m '...'; git push;";
 alias gits="gitstatus"
+
+alias latexmk="mkdir -p build; docker run --name latexmk_$(basename $PWD) --rm -v ${PWD}:/data thubo/latexmk -output-format=pdf -outdir=build"
+

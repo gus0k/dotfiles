@@ -27,6 +27,7 @@ sudo apt -y install docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
 newgrp docker
 
+sudo service docker start
 
 
 # Install oh-my-zsh
