@@ -11,8 +11,8 @@ sudo apt-get install -y \
 	ca-certificates \
 	gnupg2 \
 	software-properties-common \
-	zathura \ 
-	xdotool
+	zathura \
+	xdotool \
 
 # Docker key        
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
