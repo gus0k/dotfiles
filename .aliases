@@ -1,6 +1,7 @@
 alias l="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
+alias cg="cd $HOME/github"
 
 alias task="cd ~/Dropbox/tasks/; vim index.md"
 

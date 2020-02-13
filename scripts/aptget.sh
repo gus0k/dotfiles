@@ -13,6 +13,10 @@ sudo apt-get install -y \
 	software-properties-common \
 	zathura \
 	xdotool \
+    python3-pip \
+
+
+sudo python3 -m pip install virtualenv 
 
 # Docker key        
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
