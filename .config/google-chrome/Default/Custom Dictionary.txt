@@ -1,0 +1,2 @@
+encriptar
+checksum_v1 = 6c34d6534c5918602582439840392076

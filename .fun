@@ -1,10 +1,9 @@
 nd () {
 
 today=`date '+%Y_%m_%d'`;
-filename="~/Dropbox/journal/$today.md"
-cd ~/Dropbox/journal
+filename="$JOURNAL/entries/$today.md"
+cd $JOURNAL/entries
 vim "$today.md"
-
 }
 
 decomp () {

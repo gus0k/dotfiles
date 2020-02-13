@@ -1,0 +1,12 @@
+2020/02/13-16:57:04.486 4fe Reusing MANIFEST /home/guso/.config/google-chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/02/13-16:57:04.486 4fe Recovering log #7
+2020/02/13-16:57:04.559 4fe Reusing old log /home/guso/.config/google-chrome/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000007.log 
+2020/02/13-17:00:05.674 94c Level-0 table #12: started
+2020/02/13-17:00:05.696 94c Level-0 table #12: 1282573 bytes OK
+2020/02/13-17:00:05.700 94c Delete type=0 #7
+2020/02/13-17:13:04.794 94c Compacting 1@1 + 1@2 files
+2020/02/13-17:13:04.825 94c Generated table #13@1: 28496 keys, 1171182 bytes
+2020/02/13-17:13:04.825 94c Compacted 1@1 + 1@2 files => 1171182 bytes
+2020/02/13-17:13:04.827 94c compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/02/13-17:13:04.827 94c Delete type=2 #12
+2020/02/13-17:13:04.827 94c Delete type=2 #9
