@@ -14,6 +14,9 @@ sudo apt-get install -y \
 	zathura \
 	xdotool \
     python3-pip \
+    htop \
+    pandoc \
+    pandoc-citeproc \
 
 
 sudo python3 -m pip install virtualenv 
