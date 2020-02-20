@@ -17,6 +17,8 @@ compinit
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
 
+export FZF_BASE=$HOME/.fzf
+
 # # Set name of the theme to load --- if set to "random", it will
 # # load a random theme each time oh-my-zsh is loaded, in which case,
 # # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -58,7 +60,7 @@ ZSH_THEME="robbyrussell"
 # # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # # Example format: plugins=(rails git textmate ruby lighthouse)
 # # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(fzf)
 #
 source $ZSH/oh-my-zsh.sh
 #
@@ -94,6 +96,6 @@ source $ZSH/oh-my-zsh.sh
 
 
 ## Show git status
-gitstatus
+gits
 
 

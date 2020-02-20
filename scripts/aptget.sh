@@ -17,6 +17,7 @@ sudo apt-get install -y \
     htop \
     pandoc \
     pandoc-citeproc \
+    screen \
 
 
 sudo python3 -m pip install virtualenv 
@@ -54,5 +55,8 @@ else
     echo "fzf already exists"
 fi
 
-
-
+# Spotify
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update
+sudo apt-get install -y spotify-client
