@@ -7,7 +7,11 @@ alias task="cd ~/Dropbox/tasks/; vim index.md"
 
 alias lg="git add .; git commit -a -m '...'; git push;";
 
-alias gits="fgit | rev |  cut -c6- | rev | xargs -t -I % sh -c 'git -C % status --porcelain' | grep --color ."
+
+
+EXCLUDEGIT=".fzf|.oh-my-zsh"
+
+alias gits="fgit | rev |  cut -c6- | rev | grep -Ev '$EXCLUDEGIT'  | xargs -t -I % sh -c 'git -C % status --porcelain' | grep --color ."
 alias fgit="find $HOME -name .git -type d -prune"
 
 
