@@ -1,3 +1,4 @@
+sudo apt-add-repository non-free
 sudo apt-get update
 
 sudo apt-get install -y \
@@ -18,6 +19,7 @@ sudo apt-get install -y \
     pandoc \
     pandoc-citeproc \
     screen \
+    firmware-misc-nonfree \
 
 
 sudo python3 -m pip install virtualenv 
