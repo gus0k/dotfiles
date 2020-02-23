@@ -20,6 +20,7 @@ sudo apt-get install -y \
     pandoc-citeproc \
     screen \
     firmware-misc-nonfree \
+    tmux \
 
 
 sudo python3 -m pip install virtualenv 
