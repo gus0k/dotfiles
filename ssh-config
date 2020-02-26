@@ -1,0 +1,5 @@
+Host lame23
+    HostName lame23.enst.fr
+    User dkiedanski
+    IdentityFile ~/.ssh/id_rsa
+    PubkeyAuthentication yes

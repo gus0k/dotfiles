@@ -14,4 +14,6 @@ EXCLUDEGIT=".fzf|.oh-my-zsh"
 alias gits="fgit | rev |  cut -c6- | rev | grep -Ev '$EXCLUDEGIT'  | xargs -t -I % sh -c 'git -C % status --porcelain' | grep --color ."
 alias fgit="find $HOME -name .git -type d -prune"
 
+alias hdmi="xrandr --output eDP-1 --primary --auto --output HDMI-1 --right-of eDP-1 --auto"
+
 

@@ -21,6 +21,7 @@ sudo apt-get install -y \
     screen \
     firmware-misc-nonfree \
     tmux \
+    rsync \
 
 
 sudo python3 -m pip install virtualenv 
