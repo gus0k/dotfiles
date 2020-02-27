@@ -1,2 +1,3 @@
+#!/usr/bin/zsh
 mkdir -p build
-exec docker run --name latexmk_$(basename $PWD) --rm -v ${PWD}:/data thubo/latexmk -pdf -f -outdir=build "$1"
+docker run --name latexmk_"$(basename $PWD)" --rm -v "${PWD}":/data -e USER_ID="$(id -u)" -e GROUP_ID="$(id -g)" thubo/latexmk -pdf -f -outdir=build "$1"

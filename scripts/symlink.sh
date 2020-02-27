@@ -36,3 +36,4 @@ linkDotfile .zshrc
 linkDotfile .fun
 linkDotfile .gitconfig
 linkDotfile .bashrc
+linkDotfile .dockerfuncs

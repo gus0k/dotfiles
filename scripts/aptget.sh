@@ -22,6 +22,10 @@ sudo apt-get install -y \
     firmware-misc-nonfree \
     tmux \
     rsync \
+    mutt \
+    weechat \
+    weechat-python \
+    python3-websocket \
 
 
 sudo python3 -m pip install virtualenv 

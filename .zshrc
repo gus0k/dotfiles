@@ -12,6 +12,12 @@ if [ -f ~/.fun ]; then
 	source ~/.fun
 fi
 
+if [ -f ~/.dockerfuncs ]; then
+	source ~/.dockerfuncs
+fi
+
+mkdir -p "$HOME/bin"
+
 autoload -Uz compinit
 compinit
 # Completion for kitty
