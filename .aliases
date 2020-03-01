@@ -16,4 +16,4 @@ alias fgit="find $HOME -name .git -type d -prune"
 
 alias hdmi="xrandr --output eDP-1 --primary --auto --output HDMI-1 --right-of eDP-1 --auto"
 
-
+alias dumpbib="cp $BIB/phd.bib test.bib"

@@ -26,6 +26,10 @@ sudo apt-get install -y \
     weechat \
     weechat-python \
     python3-websocket \
+    parallel \
+    bc \
+    network-manager-openvpn-gnome \
+    openvpn \
 
 
 sudo python3 -m pip install virtualenv 
