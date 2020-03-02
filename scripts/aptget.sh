@@ -30,6 +30,7 @@ sudo apt-get install -y \
     bc \
     network-manager-openvpn-gnome \
     openvpn \
+    ranger \
 
 
 sudo python3 -m pip install virtualenv 
