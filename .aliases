@@ -17,3 +17,12 @@ alias fgit="find $HOME -name .git -type d -prune"
 alias hdmi="xrandr --output eDP-1 --primary --auto --output HDMI-1 --right-of eDP-1 --auto"
 
 alias dumpbib="cp $BIB/phd.bib test.bib"
+
+
+alias pydev="tmux new-session -s pythondev \; \
+  send-keys 'vim -c \":Vexplore\"' C-m \; \
+  split-window -h -p 35 \; \
+  send-keys 'source venv/bin/activate' C-m \; \
+  send-keys 'ipython' C-m \; \
+  split-window -v -p 25 \; \
+  select-pane -t 0 \;"

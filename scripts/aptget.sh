@@ -31,6 +31,7 @@ sudo apt-get install -y \
     network-manager-openvpn-gnome \
     openvpn \
     ranger \
+    cmake \
 
 
 sudo python3 -m pip install virtualenv 
@@ -73,3 +74,14 @@ curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update
 sudo apt-get install -y spotify-client
+
+
+## Install syncthing
+curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+
+# Add the "stable" channel to your APT sources:
+echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+
+# Update and install syncthing:
+sudo apt-get update
+sudo apt-get install syncthing
