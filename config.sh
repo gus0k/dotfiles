@@ -8,6 +8,9 @@ sudo ln -sf $DOTFILES/i3 $HOME/.i3
 sudo ln -sf $DOTFILES/ranger $HOME/.config
 sudo ln -sf $DOTFILES/ssh-config $HOME/.ssh/config
 sudo ln -sf $DOTFILES/.tmux $HOME/.tmux.conf
+sudo ln -sf $DOTFILES/.Xresources $HOME/.Xresources
+
+xrdb $HOME/.Xresources
 
 chmod 600 $DOTFILES/ssh-config
 chmod 600 $HOME/.ssh/config

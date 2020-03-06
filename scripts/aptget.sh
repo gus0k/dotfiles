@@ -32,6 +32,8 @@ sudo apt-get install -y \
     openvpn \
     ranger \
     cmake \
+    rxvt-unicode \
+    xsel \
 
 
 sudo python3 -m pip install virtualenv 
