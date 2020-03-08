@@ -23,6 +23,8 @@ alias pydev="tmux new-session -s pythondev \; \
   send-keys 'vim -c \":Vexplore\"' C-m \; \
   split-window -h -p 35 \; \
   send-keys 'source venv/bin/activate' C-m \; \
-  send-keys 'ipython' C-m \; \
+  send-keys 'ipy' C-m \; \
   split-window -v -p 25 \; \
   select-pane -t 0 \;"
+
+alias ipy="ipython --no-confirm-exit --no-banner --quick --InteractiveShellApp.extensions=\"['autoreload']\" --InteractiveShellApp.exec_lines=\"['%autoreload 2', 'import os,sys']\""

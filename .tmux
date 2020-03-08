@@ -3,6 +3,8 @@ unbind-key C-a
 bind-key C-a send-prefix
 set -g base-index 1
 
+set -sg escape-time 0
+
 set -g default-shell /bin/zsh
 set -g default-terminal "screen-256color"
 
