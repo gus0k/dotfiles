@@ -1,17 +1,21 @@
+# vi ft=zsh
 alias l="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
 alias cg="cd $HOME/github"
 
-alias task="cd ~/Dropbox/tasks/; vim index.md"
+alias ltx="latexmk -pdf -pvc -outdir=build -view=none"
 
 alias lg="git add .; git commit -a -m '...'; git push;";
 
 alias vim="nvim.appimage"
 
+alias S="source venv/bin/activate"
+
+alias rem="remind ~/.config/remind/reminders.rem"
 
 
-EXCLUDEGIT=".fzf|.oh-my-zsh|plugged|osqp"
+EXCLUDEGIT="pelican|.fzf|.oh-my-zsh|plugged|osqp"
 
 alias gits="fgit | rev |  cut -c6- | rev | grep -Ev '$EXCLUDEGIT'  | xargs -t -I % sh -c 'git -C % status --porcelain' | grep --color ."
 alias fgit="find $HOME -name .git -type d -prune"
@@ -30,3 +34,12 @@ alias pydev="tmux new-session -s pythondev \; \
   select-pane -t 0 \;"
 
 alias ipy="ipython --no-confirm-exit --no-banner --quick --InteractiveShellApp.extensions=\"['autoreload']\" --InteractiveShellApp.exec_lines=\"['%autoreload 2', 'import os,sys']\""
+
+
+
+## Jekyll
+
+alias jekyllnew='docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:$JEKYLL_VERSION jekyll new .'
+alias jekyllup='docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:$JEKYLL_VERSION /bin/sh'
+alias jekyllserve='docker run --name newblog --volume="$PWD:/srv/jekyll" -p 3000:4000 -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve --watch --drafts'
+alias jekyllbuild='docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:$JEKYLL_VERSION jekyll build'

@@ -1,3 +1,4 @@
+# vi ft=zsh
 nd () {
 
 today=`date '+%Y_%m_%d'`;
@@ -62,4 +63,14 @@ do
 	    [ -n "$bits" ] && echo "$in: $bits" || echo "$in: "
 	);
 done < $GITPROJECTS
+}
+
+
+jekyll (){
+	export JEKYLL_VERSION=3.8
+	docker run --rm \
+	  --volume="$PWD:/srv/jekyll" \
+	  -p 4000:4000 \
+	  -it jekyll/builder:$JEKYLL_VERSION \
+	  jekyll "$*"
 }

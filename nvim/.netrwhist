@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/guso/github/cdc20_code/sim'
+let g:netrw_dirhist_5='/home/guso/github/cdc20_code'
+let g:netrw_dirhist_4='/home/guso/github/cdc20_code/src'
+let g:netrw_dirhist_3='/home/guso/github/cdc20_code'
+let g:netrw_dirhist_2='/home/guso/github/cdc20_code/sim'
+let g:netrw_dirhist_1='/home/guso/github/cdc20_code'

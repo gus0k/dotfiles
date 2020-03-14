@@ -34,6 +34,11 @@ sudo apt-get install -y \
     cmake \
     rxvt-unicode \
     xsel \
+    net-tools \
+    gnupg-agent \
+    pinentry-curses \
+    autoconf \
+    remind \
 
 
 sudo python3 -m pip install virtualenv 
