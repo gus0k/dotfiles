@@ -116,13 +116,15 @@ handle_image() {
         #     exit 1;;
         # PDF
          application/pdf)
-             pdftoppm -f 1 -l 1 \
-                      -scale-to-x 1920 \
-                      -scale-to-y -1 \
-                      -singlefile \
-                      -jpeg -tiffcompression jpeg \
-                      -- "${FILE_PATH}" "${IMAGE_CACHE_PATH%.*}" \
-                 && exit 6 || exit 1;;
+	     pdftoppm -jpeg -singlefile "$path" "$cached" && mv "$cached.jpg" "$cached" && exit 6 || exit 1;;
+	    # try pdftoppm -jpeg -singlefile "$path" "${cached//.jpg}" && exit 6 || exit 1;;
+            # pdftoppm -f 1 -l 1 \
+            #          -scale-to-x 1920 \
+            #          -scale-to-y -1 \
+            #          -singlefile \
+            #          -jpeg -tiffcompression jpeg \
+            #          -- "${FILE_PATH}" "${IMAGE_CACHE_PATH%.*}" \
+            #     && exit 6 || exit 1;;
 
         # Preview archives using the first image inside.
         # (Very useful for comic book collections for example.)

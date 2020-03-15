@@ -4,12 +4,15 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
+#
 
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $term rxvt-unicode
+set $scripts /home/guso/github/dotfiles/utils
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -168,8 +171,16 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+### My keybindings
+
 bindsym $mod+Shift+e exec $term -e neomutt
+
+bindsym $mod+y exec $term -e /home/guso/github/dotfiles/utils/remind_dmenu.zsh
 
 ## Startup
 
 exec --no-startup-id conky
+
+exec --no-startup-id remind -z5 -k'notify-send "Reminder" "%s"'  /home/guso/.config/remind/ &
+

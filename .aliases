@@ -12,8 +12,7 @@ alias vim="nvim.appimage"
 
 alias S="source venv/bin/activate"
 
-alias rem="remind ~/.config/remind/reminders.rem"
-
+alias rem="remind -c $HOME/.config/remind/"
 
 EXCLUDEGIT="pelican|.fzf|.oh-my-zsh|plugged|osqp"
 
