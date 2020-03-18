@@ -34,11 +34,4 @@ alias pydev="tmux new-session -s pythondev \; \
 
 alias ipy="ipython --no-confirm-exit --no-banner --quick --InteractiveShellApp.extensions=\"['autoreload']\" --InteractiveShellApp.exec_lines=\"['%autoreload 2', 'import os,sys']\""
 
-
-
-## Jekyll
-
-alias jekyllnew='docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:$JEKYLL_VERSION jekyll new .'
-alias jekyllup='docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:$JEKYLL_VERSION /bin/sh'
-alias jekyllserve='docker run --name newblog --volume="$PWD:/srv/jekyll" -p 3000:4000 -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve --watch --drafts'
-alias jekyllbuild='docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:$JEKYLL_VERSION jekyll build'
+alias sn='pushd $NOTES; vim $(fzf --print-query --preview="cat {}" --preview-window=right:70%:wrap); popd'

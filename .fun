@@ -74,3 +74,30 @@ jekyll (){
 	  -it jekyll/builder:$JEKYLL_VERSION \
 	  jekyll "$*"
 }
+
+note () {
+  local notes_dir=$NOTES
+  case "$1" in
+    c)
+      cd "$notes_dir"
+      ;;
+    l)
+      ls "$notes_dir"
+      ;;
+    p)
+      pushd "$notes_dir"
+      msg="Regenerated at $(date -u '+%Y-%m-%d %H:%M:%S') UTC"
+      git add .
+      git commit -m "$msg"
+      git push origin master
+      popd
+      ;;
+    *)
+      pushd "$notes_dir"
+      filename=$(fzf --preview="cat {}" --preview-window=right:70%:wrap)
+      if [ -z "$filename" ]; then read filename; fi
+      nvim "$filename"
+      popd
+	 
+  esac
+}
