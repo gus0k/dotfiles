@@ -101,8 +101,12 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+autoload -Uz compinit bashcompinit
+compinit
+bashcompinit
+# Argcomplete explicit registration for pubs
+eval "$(register-python-argcomplete pubs)"
 
 ## Show git status
 gits
-
 

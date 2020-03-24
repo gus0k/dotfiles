@@ -1,11 +1,21 @@
 call plug#begin('~/.vim/plugged')
+
+"" Snippets
 Plug 'SirVer/ultisnips' " Snippets
 Plug 'honza/vim-snippets' " More snippets
-Plug 'lervag/vimtex'
-Plug 'plasticboy/vim-markdown'
-Plug 'vimwiki/vimwiki'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
+"" Latex only
+Plug 'lervag/vimtex'
+Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
+
+"" Markdown only
+Plug 'plasticboy/vim-markdown', {'for': ['markdown', 'vimwiki']}
+Plug 'iamcco/markdown-preview.nvim', {'for': ['markdown', 'vimwiki'], 'do': { -> mkdp#util#install() } }
+
+
+Plug 'vimwiki/vimwiki'
+
+"" Autocompletition
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -50,27 +60,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "mysnippets"]
 
-"" SPELLING 
-imap <c-l> <c-g>u<Esc>[s1z=`]a<c-g>u
-set spell
-set spellfile=$HOME/.config/nvim/spell/en.utf-8.add
-set spellfile=$HOME/.config/nvim/spell/es.utf-8.add
 
-""switch spellcheck languages
-let g:myLang = 0
-let g:myLangList = [ "nospell", "es_es", "en_us" ]
-function! MySpellLang()
-  "loop through languages
-  let g:myLang = g:myLang + 1
-  if g:myLang >= len(g:myLangList) | let g:myLang = 0 | endif
-  if g:myLang == 0 | set nospell | endif
-  if g:myLang == 1 | setlocal spell spelllang=es_es | endif
-  if g:myLang == 2 | setlocal spell spelllang=en_us | endif
-  echo "language:" g:myLangList[g:myLang]
-endf
-
-map <F7> :call MySpellLang()<CR>
-imap <F7> <C-o>:call MySpellLang()<CR>" COLORS
 
 "" VIMWIKI
 let g:vimwiki_table_mappings=0
