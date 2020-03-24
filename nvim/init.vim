@@ -1,8 +1,12 @@
+filetype plugin indent on   " allows auto-indenting depending on file type
+syntax on                   " syntax highlighting
 call plug#begin('~/.vim/plugged')
 
 "" Snippets
 Plug 'SirVer/ultisnips' " Snippets
 Plug 'honza/vim-snippets' " More snippets
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jpalardy/vim-slime'
 
 "" Latex only
 Plug 'lervag/vimtex'
@@ -11,7 +15,6 @@ Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 "" Markdown only
 Plug 'plasticboy/vim-markdown', {'for': ['markdown', 'vimwiki']}
 Plug 'iamcco/markdown-preview.nvim', {'for': ['markdown', 'vimwiki'], 'do': { -> mkdp#util#install() } }
-
 
 Plug 'vimwiki/vimwiki'
 
@@ -31,17 +34,30 @@ let g:python3_host_prog = '/home/guso/.config/nvim/venv/bin/python'
 if !isdirectory("/tmp/.vim-undo-dir")
     call mkdir("/tmp/.vim-undo-dir", "", 0700)
 endif
+
 set undodir=/tmp/.vim-undo-dir
 set undofile
+
+set noswapfile                  " Don't use swapfile
+set nobackup			" Don't create annoying backup files
+set nowritebackup
+
+au FocusLost * :wa              " Set vim to save the file on focus out.
 
 
 " Relative numbers
 set nu rnu
 set wildmode=longest,list   " get bash-like tab completions
-
-filetype plugin indent on   " allows auto-indenting depending on file type
-syntax on                   " syntax highlighting
 set textwidth=80
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+
+"" Moving around virtual lines
+nnoremap j gj
+nnoremap k gk
 
 "" AUTOCOMPLETITION
 let g:deoplete#enable_at_startup = 1
@@ -73,4 +89,8 @@ let g:vimwiki_list = [wiki_1]
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 
 let g:mkdp_browser = 'firefox'
+
+"" COPY-PASTE
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
 
