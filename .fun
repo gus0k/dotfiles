@@ -7,6 +7,11 @@ cd $JOURNAL/entries
 vim "$today.md"
 }
 
+cbc () {
+mv "$1" "$1.backup"
+mv "$2" "$1"
+}
+
 function extract {
  if [ -z "$1" ]; then
     # display usage if no parameters given

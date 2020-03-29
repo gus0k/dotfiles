@@ -177,7 +177,7 @@ bar {
 bindsym $mod+Shift+e exec $term -e neomutt
 bindsym $mod+Shift+d exec $term -e nvim /home/guso/github/notes/dump.txt
 
-bindsym $mod+y exec $term -e /home/guso/github/dotfiles/utils/remind_dmenu.zsh
+bindsym $mod+y exec $term -e /home/guso/github/dotfiles/bin/remind_dmenu.zsh
 
 ## Startup
 
