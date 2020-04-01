@@ -5,6 +5,7 @@ chmod 700 $HOME/.ssh
 
 
 sudo ln -sf $DOTFILES/nvim $HOME/.config/nvim
+sudo ln -sf $DOTFILES/remind $HOME/.config/remind
 sudo ln -sf $DOTFILES/i3 $HOME/.i3
 sudo ln -sf $DOTFILES/ranger $HOME/.config
 sudo ln -sf $DOTFILES/ssh-config $HOME/.ssh/config

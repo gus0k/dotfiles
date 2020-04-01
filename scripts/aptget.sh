@@ -2,6 +2,7 @@ sudo apt-add-repository non-free
 sudo apt-get update
 
 sudo apt-get install -y \
+    python3 \
 	curl \
 	keychain \
 	zsh \
@@ -42,6 +43,12 @@ sudo apt-get install -y \
 
 
 sudo python3 -m pip install virtualenv 
+python3 -m pip install --user pipx
+
+pipx install papis
+pipx install cowsay
+pipx install https://github.com/plainas/tq/zipball/stable
+
 
 # Docker key        
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -

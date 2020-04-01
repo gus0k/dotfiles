@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/guso/github/gus0k.github.io/_posts'
+let g:netrw_dirhist_3='/home/guso/.config/kitty'
+let g:netrw_dirhist_2='/home/guso/.config'
 let g:netrw_dirhist_1='/home/guso/.config/kitty'
 let g:netrw_dirhist_0='/home/guso/.config'
 let g:netrw_dirhist_9='/home/guso/projects/cdc20_code/sim'
@@ -7,6 +10,3 @@ let g:netrw_dirhist_8='/home/guso/projects/cdc20_code'
 let g:netrw_dirhist_7='/home/guso/projects/cdc20_code/sim'
 let g:netrw_dirhist_6='/home/guso/projects/cdc20_code'
 let g:netrw_dirhist_5='/home/guso/github/cdc20_code'
-let g:netrw_dirhist_4='/home/guso/github/cdc20_code/src'
-let g:netrw_dirhist_3='/home/guso/github/cdc20_code/sim'
-let g:netrw_dirhist_2='/home/guso/.config/mutt'
