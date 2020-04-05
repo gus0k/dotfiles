@@ -40,7 +40,17 @@ sudo apt-get install -y \
     pinentry-curses \
     autoconf \
     remind \
-
+    git \
+    gcc \
+    make \
+    xcb \
+    libxcb-util0-dev \
+    libxcb-ewmh-dev \
+    libxcb-randr0-dev \
+    libxcb-icccm4-dev \
+    libxcb-keysyms1-dev \
+    libxcb-xinerama0-dev \
+    libxcb-ewmh2
 
 sudo python3 -m pip install virtualenv 
 python3 -m pip install --user pipx

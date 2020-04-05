@@ -7,6 +7,7 @@ Plug 'SirVer/ultisnips' " Snippets
 Plug 'honza/vim-snippets' " More snippets
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jpalardy/vim-slime'
+Plug 'junegunn/fzf'
 
 "" Latex only
 Plug 'lervag/vimtex'
@@ -17,6 +18,9 @@ Plug 'plasticboy/vim-markdown', {'for': ['markdown', 'vimwiki']}
 Plug 'iamcco/markdown-preview.nvim', {'for': ['markdown', 'vimwiki'], 'do': { -> mkdp#util#install() } }
 
 Plug 'vimwiki/vimwiki'
+
+"" Papis
+Plug 'git@github.com:papis/papis-vim.git'
 
 "" Autocompletition
 if has('nvim')
@@ -94,3 +98,6 @@ let g:mkdp_browser = 'firefox'
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
 
+"" Papis shortcuts
+nnoremap <buffer> <localleader>pc :Papis<cr>
+nnoremap <buffer> <localleader>pv :PapisView<cr>
